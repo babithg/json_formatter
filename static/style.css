@@ -1,0 +1,86 @@
+
+body {
+    background-color: #121212;
+    color: #00BFFF;
+    font-family: Arial, sans-serif;
+    margin: 0.1% 1%; 
+}
+
+a, a:checked {
+   text-decoration: none;
+   color: #00BFFF;
+}
+
+input[type="submit"]{
+    background-color: #00BFFF;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    width: 98vw;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5%; 
+    border-radius: 15px; 
+    font-weight: bold; 
+}
+input[type="submit"]:hover{
+    background-color: #009ACD;
+}
+
+input[type="file"]::-webkit-file-upload-button{
+    color: #00BFFF;
+    border: 1px solid green;
+    border-radius: 5%;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 2% 10%;
+    margin-top: 10px;
+}
+
+
+.input_choice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input_choice label {
+    margin: 15px;
+}
+
+.input_choice select {
+    width: 35%;
+    height: 25px; 
+    color:  #00BFFF;
+    background-color: #121212;
+}
+
+#file_input{
+    display: none;
+}
+
+#json_text {
+    display: block;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.read_input{
+    display: flexbox;
+}
+
+.read_output {
+    display: flexbox;
+}
+
+.read_output textarea , .read_input textarea{
+    height: 70vh;
+    width: 45vw;
+    background-color: #121212;
+    color: aliceblue;
+}

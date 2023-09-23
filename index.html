@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Formatter</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <form action="/format" method="post" enctype="multipart/form-data">
+        <h1><a href="/" rel="noopener noreferrer">JSON Formatter</a></h1>
+        <div class="input_choice">
+            <label for="input_type">Choose input type:</label>
+            <select name="input_type" id="input_type">
+                <option value="text" selected>Text</option>
+                <option value="file">File</option>
+            </select>
+        </div>
+
+        <div class="wrapper">
+            <div class="read_input">
+                <div id="file_input">
+                    <label for="json_file">Upload JSON file:</label>
+                    <input type="file" name="json_file" id="json_file">
+                </div>
+        
+                <textarea name="json_text" id="json_text" placeholder="Enter JSON here">{{ original_json }}</textarea>
+            </div>
+    
+            <div id="result" class="read_output">
+                <textarea name="formatted_json" id="formatted_json" placeholder="Fromated JSON" readonly>{{ formatted_json }}</textarea>
+            </div>
+        </div>
+
+        <input type="submit" value="Format JSON">
+    </form>
+
+
+    <script>
+        document.getElementById('input_type').addEventListener('change', function() {
+            var inputType = this.value;
+            if (inputType === 'text') {
+                document.getElementById('file_input').style.display = 'none';
+                document.getElementById('json_text').style.display = 'block';
+            } else {
+                document.getElementById('file_input').style.display = 'block';
+                document.getElementById('json_text').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
